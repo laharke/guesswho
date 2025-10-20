@@ -1,0 +1,213 @@
+[
+    {
+      "id": 1,
+      "name": "LeBron James",
+      "image": "/images/basketball/lebron.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Stephen Curry",
+      "image": "/images/basketball/curry.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Stephen_Curry"
+    },
+    {
+      "id": 3,
+      "name": "Kevin Durant",
+      "image": "/images/basketball/durant.jpeg",
+      "wiki": "https://en.wikipedia.org/wiki/Kevin_Durant"
+    },
+    {
+      "id": 4,
+      "name": "Giannis Antetokounmpo",
+      "image": "/images/basketball/giannis.jpeg",
+      "wiki": "https://en.wikipedia.org/wiki/Giannis_Antetokounmpo"
+    },
+    {
+      "id": 5,
+      "name": "Kawhi Leonard",
+      "image": "/images/basketball/leonard.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Kawhi_Leonard"
+    },
+    {
+      "id": 6,
+      "name": "Luka Dončić",
+      "image": "/images/basketball/doncic.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Luka_Don%C4%8Di%C4%87"
+    },
+    {
+      "id": 7,
+      "name": "Joel Embiid",
+      "image": "/images/basketball/embiid.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Joel_Embiid"
+    },
+    {
+      "id": 8,
+      "name": "Nikola Jokić",
+      "image": "/images/basketball/jokic.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Nikola_Joki%C4%87"
+    },
+    {
+      "id": 9,
+      "name": "Damian Lillard",
+      "image": "/images/basketball/lillard.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Damian_Lillard#/media/File:Damian_Lillard_(2021)_(cropped).jpg"
+    },
+    {
+      "id": 10,
+      "name": "Zion Williamson",
+      "image": "/images/basketball/zion.jpg",
+      "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 11,
+        "name": "Kareem Abdul-Jabbar",
+        "image": "/images/basketball/kareem.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 12,
+        "name": "Larry Bird",
+        "image": "/images/basketball/larrybird.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 13,
+        "name": "Kobe Bryant",
+        "image": "/images/basketball/kobe.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 14,
+        "name": "Tim Duncan",
+        "image": "/images/basketball/timduncan.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 15,
+        "name": "Dirk Nowitzki",
+        "image": "/images/basketball/DirkNowitzki.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 16,
+        "name": "Hakeem Olajuwon",
+        "image": "/images/basketball/olajuwon.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 17,
+        "name": "Karl Malone",
+        "image": "/images/basketball/malone.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 18,
+        "name": "Michael Jordan",
+        "image": "/images/basketball/jordan.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 19,
+        "name": "Shaquille O'Neal",
+        "image": "/images/basketball/shaq.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 20,
+        "name": "Charles Barkley",
+        "image": "/images/basketball/barkley.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 21,
+        "name": "James Harden",
+        "image": "/images/basketball/jamesharden.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 22,
+        "name": "Anthony Edwards",
+        "image": "/images/basketball/edwards.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 23,
+        "name": "Kyrie Irving",
+        "image": "/images/basketball/kyrieirving.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 24,
+        "name": "Devin Booker",
+        "image": "/images/basketball/booker.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 25,
+        "name": "Mikal Bridges",
+        "image": "/images/basketball/bridges.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 26,
+        "name": "Harrison Barnes",
+        "image": "/images/basketball/barnes.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 27,
+        "name": "Nicolas Batum",
+        "image": "/images/basketball/batum.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 28,
+        "name": "Bam Adebayo",
+        "image": "/images/basketball/adebayo.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 29,
+        "name": "Tyler Hero",
+        "image": "/images/basketball/tylerhero.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 30,
+        "name": "Jason Williams",
+        "image": "/images/basketball/jasonwilliams.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 31,
+        "name": "Kevin Love",
+        "image": "/images/basketball/klove.jpeg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 32,
+        "name": "Steve Nash",
+        "image": "/images/basketball/nash.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 33,
+        "name": "John Stockton",
+        "image": "/images/basketball/stockton.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 34,
+        "name": "Pau Gasol",
+        "image": "/images/basketball/paugasol.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    },
+    {
+        "id": 35,
+        "name": "Marc Gasol",
+        "image": "/images/basketball/marcgasol.jpg",
+        "wiki": "https://en.wikipedia.org/wiki/Zion_Williamson#/media/File:Zion_Williamson_2020_(cropped).jpg"
+    }
+
+  ]
+  

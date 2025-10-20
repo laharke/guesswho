@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GuessWho</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- ===== INDEX (Ingreso) ===== -->
+  <section id="index-screen" class="screen active">
+    <h1>🎭 GuessWho</h1>
+    <input type="text" id="playerName" placeholder="Tu nombre..." />
+    <div class="btn-group">
+      <button id="createRoomBtn">Crear sala</button>
+      <input type="text" id="joinCode" placeholder="Código de sala..." />
+      <button id="joinRoomBtn">Unirse</button>
+    </div>
+  </section>
+  
+
+  <!-- ===== LOBBY ===== -->
+  <section id="lobby-screen" class="screen hidden">
+    <h2>Lobby</h2>
+    <p>Código de sala: <span id="roomCodeDisplay"></span></p>
+    <h3>Jugadores:</h3>
+    <ul id="playerList"></ul>
+
+    <div class="lobby-controls">
+      <label for="categorySelect">Categoría:</label>
+      <select id="categorySelect" disabled>
+        <option value="futbol">⚽ Fútbol</option>
+        <option value="basquet">🏀 Básquet</option>
+      </select>
+
+      <div class="btn-group">
+        <button id="startGameBtn" disabled>Comenzar partida</button>
+        <button id="leaveRoomBtn">Salir</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GAME ===== -->
+  <section id="game-screen" class="screen" style="display: none;">
+    <h2>Partida en curso</h2>
+    <p id="assignedPlayerDisplay">Tu jugador: <span id="yourPlayerName"></span></p>
+    <img id="yourPlayerImage" src="" alt="Tu jugador" style="max-width:150px;" />
+    <p id="gameCategoryDisplay"></p>
+    <div id="gridContainer" class="grid-8x3"></div>
+    <button id="exitGameBtn">Salir al inicio</button>
+  </section>
+  
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/client.js"></script>
+</body>
+</html>

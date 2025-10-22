@@ -254,6 +254,7 @@ function updatePlayerList(players) {
   });
   
   // Mostrar/ocultar mensaje de espera
+  const waitingMessage = document.getElementById('waitingMessage');
   if (waitingMessage) {
     waitingMessage.style.display = players.length < 2 ? 'flex' : 'none';
   }

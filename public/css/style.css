@@ -75,7 +75,7 @@ body {
 }
 
 /* ========================================
-   BACKGROUND ANIMATION
+   GUESSWHO THEMED BACKGROUND ANIMATION
 ======================================== */
 .background-animation {
   position: fixed;
@@ -88,63 +88,260 @@ body {
   overflow: hidden;
 }
 
-.bubble {
+/* Patrón de grilla sutil */
+.pattern-grid {
   position: absolute;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  border-radius: 50%;
-  opacity: 0.1;
-  animation: float 20s infinite linear;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 50px 50px;
+  animation: gridMove 60s linear infinite;
 }
 
-.bubble:nth-child(1) {
-  width: 80px;
-  height: 80px;
-  left: 10%;
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Gradiente overlay para profundidad */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at top left, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, rgba(240, 147, 251, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom center, rgba(72, 187, 120, 0.08) 0%, transparent 50%);
+}
+
+/* Elementos flotantes temáticos */
+.floating-element {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: floatThemed 25s infinite linear;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+/* Estilos específicos por tipo de elemento */
+.athlete-silhouette {
+  font-size: 2.5rem;
+  animation: athleteFloat 30s infinite linear;
+}
+
+.athlete-silhouette[data-type="basketball"] {
+  color: #ff8c42;
+  left: 15%;
   animation-delay: 0s;
 }
 
-.bubble:nth-child(2) {
-  width: 120px;
-  height: 120px;
-  left: 20%;
-  animation-delay: 4s;
+.athlete-silhouette[data-type="football"] {
+  color: #4CAF50;
+  left: 75%;
+  animation-delay: 10s;
 }
 
-.bubble:nth-child(3) {
-  width: 60px;
-  height: 60px;
-  left: 70%;
+.athlete-silhouette[data-type="medal"] {
+  color: #FFD700;
+  left: 60%;
+  animation-delay: 20s;
+  font-size: 1.8rem;
+}
+
+.question-mark {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  animation: questionFloat 20s infinite linear, pulse 3s infinite;
+}
+
+.question-mark:nth-of-type(3) {
+  left: 25%;
+  animation-delay: 5s;
+}
+
+.question-mark:nth-of-type(7) {
+  left: 85%;
+  animation-delay: 15s;
+  font-size: 2rem;
+}
+
+.card-element {
+  color: #E53E3E;
+  left: 40%;
   animation-delay: 8s;
+  font-size: 2.2rem;
 }
 
-.bubble:nth-child(4) {
-  width: 100px;
-  height: 100px;
-  left: 80%;
+.mystery-eye {
+  color: var(--primary-color);
+  left: 5%;
   animation-delay: 12s;
+  font-size: 2.8rem;
+  animation: mysteryFloat 35s infinite linear, blink 4s infinite;
 }
 
-.bubble:nth-child(5) {
-  width: 140px;
-  height: 140px;
-  left: 50%;
-  animation-delay: 16s;
+.sports-icon {
+  color: #FFD700;
+  left: 90%;
+  animation-delay: 3s;
+  font-size: 2.3rem;
 }
 
-@keyframes float {
+.game-element {
+  color: #FF6B6B;
+  left: 55%;
+  animation-delay: 18s;
+  font-size: 2.1rem;
+}
+
+.mystery-element {
+  color: #9F7AEA;
+  left: 30%;
+  animation-delay: 25s;
+  font-size: 2rem;
+}
+
+/* Animaciones específicas */
+@keyframes floatThemed {
   0% {
-    transform: translateY(100vh) rotate(0deg);
+    transform: translateY(100vh) translateX(0px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(50vh) translateX(20px) rotate(180deg) scale(1);
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) translateX(0px) rotate(360deg) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes athleteFloat {
+  0% {
+    transform: translateY(100vh) translateX(-30px) rotate(0deg) scale(0.7);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(75vh) translateX(50px) rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-20px) rotate(180deg) scale(0.9);
+  }
+  75% {
+    transform: translateY(25vh) translateX(40px) rotate(270deg) scale(1.2);
+  }
+  92% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-100px) translateX(-10px) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes questionFloat {
+  0% {
+    transform: translateY(100vh) scale(0.5) rotate(0deg);
     opacity: 0;
   }
   10% {
-    opacity: 0.1;
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(50vh) scale(1.2) rotate(180deg);
+    opacity: 1;
   }
   90% {
-    opacity: 0.1;
+    opacity: 0.6;
   }
   100% {
-    transform: translateY(-100px) rotate(360deg);
+    transform: translateY(-100px) scale(0.7) rotate(360deg);
     opacity: 0;
+  }
+}
+
+@keyframes mysteryFloat {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.9;
+  }
+  25% {
+    transform: translateY(75vh) scale(1.3);
+  }
+  50% {
+    transform: translateY(50vh) scale(0.9);
+  }
+  75% {
+    transform: translateY(25vh) scale(1.1);
+  }
+  95% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.2;
+  }
+}
+
+/* Efectos adicionales para crear ambiente de misterio */
+.background-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 139, 66, 0.05) 0%, transparent 50%);
+  animation: ambientGlow 15s ease-in-out infinite alternate;
+}
+
+@keyframes ambientGlow {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.1);
   }
 }
 

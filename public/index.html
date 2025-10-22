@@ -3,51 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GuessWho</title>
+  <title>GuessWho - El Juego de Adivinar</title>
   <link rel="stylesheet" href="/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <div class="background-animation">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+
   <!-- ===== INDEX (Ingreso) ===== -->
   <section id="index-screen" class="screen active">
-    <h1>🎭 GuessWho</h1>
-    <input type="text" id="playerName" placeholder="Tu nombre..." />
-    <div class="btn-group">
-      <button id="createRoomBtn">Crear sala</button>
-      <input type="text" id="joinCode" placeholder="Código de sala..." />
-      <button id="joinRoomBtn">Unirse</button>
+    <div class="container">
+      <div class="welcome-card">
+        <div class="logo-section">
+          <div class="logo-icon">
+            <i class="fas fa-user-secret"></i>
+          </div>
+          <h1 class="main-title">GuessWho</h1>
+          <p class="subtitle">El clásico juego de adivinar con deportistas</p>
+        </div>
+        
+        <div class="form-section">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="playerName" placeholder="Ingresa tu nombre" maxlength="15" />
+          </div>
+          
+          <div class="action-buttons">
+            <button id="createRoomBtn" class="btn btn-primary">
+              <i class="fas fa-plus"></i>
+              <span>Crear Sala</span>
+            </button>
+            
+            <div class="divider">
+              <span>o</span>
+            </div>
+            
+            <div class="join-section">
+              <div class="input-group">
+                <i class="fas fa-key"></i>
+                <input type="text" id="joinCode" placeholder="Código de sala" maxlength="4" />
+              </div>
+              <button id="joinRoomBtn" class="btn btn-secondary">
+                <i class="fas fa-sign-in-alt"></i>
+                <span>Unirse</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   
 
   <!-- ===== LOBBY ===== -->
   <section id="lobby-screen" class="screen hidden">
-    <h2>Lobby</h2>
-    <p>Código de sala: <span id="roomCodeDisplay"></span></p>
-    <h3>Jugadores:</h3>
-    <ul id="playerList"></ul>
+    <div class="container">
+      <div class="lobby-card">
+        <div class="lobby-header">
+          <div class="room-info">
+            <h2><i class="fas fa-users"></i> Sala de Juego</h2>
+            <div class="room-code">
+              <span class="code-label">Código:</span>
+              <span id="roomCodeDisplay" class="code-value"></span>
+              <button class="copy-code" title="Copiar código">
+                <i class="fas fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="players-section">
+          <h3><i class="fas fa-gamepad"></i> Jugadores</h3>
+          <ul id="playerList" class="players-list"></ul>
+          <div class="waiting-message" id="waitingMessage">
+            <i class="fas fa-clock"></i>
+            <span>Esperando más jugadores...</span>
+          </div>
+        </div>
 
-    <div class="lobby-controls">
-      <label for="categorySelect">Categoría:</label>
-      <select id="categorySelect" disabled>
-        <option value="futbol">⚽ Fútbol</option>
-        <option value="basquet">🏀 Básquet</option>
-      </select>
+        <div class="game-settings">
+          <div class="setting-group">
+            <label for="categorySelect">
+              <i class="fas fa-trophy"></i>
+              Categoría de Deportes
+            </label>
+            <div class="select-wrapper">
+              <select id="categorySelect" disabled>
+                <option value="futbol">⚽ Fútbol</option>
+                <option value="basquet">🏀 Básquet</option>
+              </select>
+            </div>
+          </div>
+        </div>
 
-      <div class="btn-group">
-        <button id="startGameBtn" disabled>Comenzar partida</button>
-        <button id="leaveRoomBtn">Salir</button>
+        <div class="lobby-actions">
+          <button id="startGameBtn" class="btn btn-success" disabled>
+            <i class="fas fa-play"></i>
+            <span>Comenzar Partida</span>
+          </button>
+          <button id="leaveRoomBtn" class="btn btn-danger">
+            <i class="fas fa-door-open"></i>
+            <span>Salir de la Sala</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ===== GAME ===== -->
   <section id="game-screen" class="screen" style="display: none;">
-    <h2>Partida en curso</h2>
-    <p id="assignedPlayerDisplay">Tu jugador: <span id="yourPlayerName"></span></p>
-    <img id="yourPlayerImage" src="" alt="Tu jugador" style="max-width:150px;" />
-    <p id="gameCategoryDisplay"></p>
-    <div id="gridContainer" class="grid-8x3"></div>
-    <button id="exitGameBtn">Salir al inicio</button>
+    <div class="game-container">
+      <div class="game-header">
+        <div class="game-info">
+          <h2><i class="fas fa-gamepad"></i> Partida en Curso</h2>
+          <p id="gameCategoryDisplay" class="category-display"></p>
+        </div>
+        
+        <div class="your-player-section">
+          <div class="player-card">
+            <div class="player-image-container">
+              <img id="yourPlayerImage" src="" alt="Tu jugador" />
+              <div class="secret-overlay">
+                <i class="fas fa-eye-slash"></i>
+                <span>Tu jugador secreto</span>
+              </div>
+            </div>
+            <div class="player-details">
+              <h3>Tu Jugador:</h3>
+              <span id="yourPlayerName" class="player-name"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="game-instructions">
+        <i class="fas fa-info-circle"></i>
+        <span>Haz clic en los jugadores para descartarlos. ¡Adivina quién es el jugador secreto de tu oponente!</span>
+      </div>
+      
+      <div class="grid-wrapper">
+        <div id="gridContainer" class="players-grid"></div>
+      </div>
+      
+      <div class="game-actions">
+        <button id="exitGameBtn" class="btn btn-danger">
+          <i class="fas fa-home"></i>
+          <span>Salir al Inicio</span>
+        </button>
+      </div>
+    </div>
   </section>
   
 

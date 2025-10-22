@@ -8,9 +8,7 @@ import fs from "fs";
 // Para poder usar __dirname en ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const allPlayers = JSON.parse(
-    fs.readFileSync(path.join(__dirname, "src/data/basketball.json"), "utf8")
-  );
+
   
 
 const app = express();
@@ -71,6 +69,12 @@ io.on("connection", (socket) => {
   socket.on("startGame", (roomCode) => {
     const room = rooms[roomCode];
     if (!room || socket.id !== room.host) return;
+    // Cambiar la logica para que ALLPLAYERS cambie segun la categoria 
+    
+    const allPlayers = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "src/data/"+room.category+".json"), "utf8")
+    );
+
   
     // 1) Elegir 24 jugadores de los 50 (para la grilla)
     const shuffled = shuffleArray(allPlayers); // allPlayers puede estar cargado en server o leído de JSON
